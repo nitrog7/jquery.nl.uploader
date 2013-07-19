@@ -47,11 +47,27 @@
 			base.options.inputTypes		= base.options.inputTypes.replace('[]','')+'[]';
 				
             //Get input
-			this.input	= this.find('input[type="file"]');
-			this.input.attr('multiple','true');
+			var	input;
+			
+			if(base.options.inputSelector == '') {
+				input	= this.find('input[type="file"]');
+			} else {
+				input	= $(base.options.inputSelector);
+			}
+			
+			//If input does not exist, create one
+			if(input.length == 0) {
+				$('<input/>').attr({'type':'file', 'name':'files'}).appendTo(this);
+			}
+			
+			if(base.options.imagesOnly) {
+				input.attr('accept', 'image/png,image/x-png,image/gif,image/jpeg,image/jpg');
+			}
+			
+			input.attr('multiple','true');
 			
             //Listener
-            this.input.change(base.onAddFile);
+            input.change(base.onAddFile);
             
             //Find existing container
             base.list	= $('.uploader');
@@ -144,7 +160,6 @@
     
     $.fn.uploader.defaults = {
         listClass:'',
-        formSelector:'',
         inputSelector:'',
         onComplete:null,
         imagesOnly:false,
