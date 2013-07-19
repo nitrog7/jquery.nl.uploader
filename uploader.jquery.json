@@ -1,0 +1,29 @@
+{
+    "name": "uploader",
+    "title": "jQuery Uploader",
+    "description": "jQuery plugin to upload multiple files via ajax.",
+    "keywords": [
+        "upload",
+        "multiple",
+        "files",
+        "ajax"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Giraldo Rosales",
+        "url": "http://www.nitrogenlabs.com"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "bugs": "https://github.com/nitrog7/jquery.nl.uploader/issues",
+    "homepage": "https://github.com/nitrog7/jquery.nl.uploader",
+    "docs": "https://github.com/nitrog7/jquery.nl.uploader/wiki/JQuery-File-Uploader",
+    "download": "https://github.com/nitrog7/jquery.nl.uploader/archive/main.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
